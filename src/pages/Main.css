@@ -1,0 +1,142 @@
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-logo {
+  flex-grow: 5;
+  background-image: url(../assets/MaskGroup.png);
+  background-size: cover;
+  height: calc(100vh - 3rem - 4rem);
+}
+
+.sub-logo-menu {
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 0 1.6rem;
+}
+.sub-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-menu > * {
+  padding: 2px;
+}
+.sub__font {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sub__font__conjuction {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.sub__font__description {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.form-login {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welocme__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.welocme__logo__text {
+  font-style: italic;
+  margin-top: 3rem;
+  color: #e85a4f;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.form-label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  text-transform: capitalize;
+}
+.form-labels-align {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin-bottom: 3rem;
+}
+.form-labels-align input {
+  outline: none;
+  border: none;
+  background-color: #f2f2f2;
+  height: 2.8rem;
+  border-bottom: 1px solid #d1d7e0;
+}
+
+.form-labels-align input:active,
+.form-labels-align input:focus {
+  border-bottom: 2px solid #cc0000;
+}
+
+.form-labels-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-labels-checkbox > * {
+  padding: 0 0.6rem;
+}
+.form-label-checkbox {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.login-user {
+  display: flex;
+  align-items: center;
+}
+.login__user_form {
+  width: 16rem;
+  margin-left: auto;
+  height: 2.8rem;
+  background-color: #fc4445;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #f2f2f2;
+  border: 1px solid #fff;
+  transition: all 0.2s;
+  border-radius: 3px;
+}
+
+.login__user_form:active,
+.login__user_form:hover {
+  font-weight: 400;
+  letter-spacing: 1px;
+  background-color: #cc0000;
+}
+
+.user__forgot_password {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+.forgot-cascade {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e85a4f;
+}
+.img__cultivating__logo {
+  height: 4rem;
+  width: 24rem;
+}

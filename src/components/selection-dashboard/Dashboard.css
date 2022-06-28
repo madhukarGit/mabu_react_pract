@@ -1,0 +1,11 @@
+.layout__grid {
+  display: flex;
+}
+.layout__grid-side-nav {
+  height: calc(100vh - 4rem - 3rem);
+  flex: 0 0 6rem;
+}
+.layout__grid-side-main {
+  background-color: #f3f7fb;
+  flex-grow: 1;
+}

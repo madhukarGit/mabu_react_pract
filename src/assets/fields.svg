@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="244" viewBox="0 0 56 244">
+  <g id="Group_29234" data-name="Group 29234" transform="translate(-72 -129)">
+    <text id="Bin_Capacity" data-name="Bin
+ Capacity" transform="translate(122 140)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="-15" y="0">Bin</tspan><tspan x="-43" y="11" xml:space="preserve"> Capacity</tspan></text>
+    <text id="FN" transform="translate(110 169)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">FN</tspan></text>
+    <text id="Commodity" transform="translate(72 207)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Commodity</tspan></text>
+    <text id="BU" transform="translate(109 303)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">BU</tspan></text>
+    <text id="Pro" transform="translate(107 325)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Pro</tspan></text>
+    <text id="DHW" transform="translate(100 348)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">DHW</tspan></text>
+    <text id="TW" transform="translate(108 370)" font-size="10" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">TW</tspan></text>
+  </g>
+</svg>

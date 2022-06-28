@@ -1,0 +1,19 @@
+.layout__grid {
+  display: flex;
+}
+.layout__grid-side-nav {
+  height: calc(100vh - 4rem - 3rem);
+  flex: 0 0 6rem;
+}
+.layout__grid-side-main {
+  background-color: #f3f7fb;
+  flex-grow: 1;
+}
+.layout__grid-bin-loading {
+  flex: 0 0 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf2f9;
+}

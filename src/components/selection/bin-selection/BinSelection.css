@@ -1,0 +1,91 @@
+.bins__selection {
+  display: flex;
+  align-items: center;
+  margin-top: -5rem;
+}
+.bins__selection__align {
+  margin-top: 6rem;
+  border-top: 8px solid #ffffff;
+  display: flex;
+  gap: 2rem;
+}
+.bins__selection__fileds {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.bins__selection__fileds > * {
+  padding: 0.8rem;
+}
+
+.bins__selection__text {
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid grey;
+}
+.bins__selection-capacity {
+  display: flex;
+  justify-content: space-around;
+}
+.bin__names__align {
+  display: flex;
+}
+
+.bin__names__1 {
+  display: flex;
+  margin-left: 14rem;
+  align-items: center;
+  gap: 12rem;
+}
+.bin__names__2 {
+  display: flex;
+  margin-left: 14rem;
+  align-items: center;
+  gap: 8rem;
+  margin-left: 10rem;
+}
+.bin__names__3 {
+  display: flex;
+  margin-left: 8rem;
+  align-items: center;
+  gap: 11rem;
+}
+.bin__names__align__names {
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.bin__names__1,
+.bin__names__2,
+.bin__names__3 {
+  font-weight: bold;
+}
+
+.bin__names__1__label {
+  display: flex;
+  margin-left: 14rem;
+  align-items: center;
+  gap: 11rem;
+}
+.bin__names__2__label {
+  display: flex;
+  margin-left: 14rem;
+  align-items: center;
+  gap: 8rem;
+  margin-left: 10rem;
+}
+.bin__names__3__label {
+  display: flex;
+  margin-left: 10rem;
+  align-items: center;
+  gap: 11rem;
+}
+
+.bin__names__1__label,
+.bin__names__2__label,
+.bin__names__3__label {
+  font-weight: bold;
+}

@@ -1,0 +1,29 @@
+.barStyles {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  margin-left: 50px;
+  width: 100%;
+  border: 1px solid #adadad;
+  margin-top: 10px;
+  z-index: 0;
+  height: 100%;
+  overflow-x: scroll;
+}
+.container::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 4px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: #5d5c61;
+}
+
+.flexBar {
+  display: flex;
+}

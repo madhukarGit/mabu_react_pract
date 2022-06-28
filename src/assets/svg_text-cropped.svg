@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 31.5 83 185.57">
+      <g transform="translate(-265.267 -158)">
+        <path d="M3.716,180.067V48.447H0V40.519H4.553L34.067,9.461V0H48.933V8.808L79.066,40.519H83v7.928H79.9v131.62Zm.62-.732H79.284V48.447H4.336ZM82.381,47.566V41.4H.619v6.166H82.381ZM5.594,40.519h72.43l-29.3-30.83H34.891ZM48.314,8.808V.881H34.687V8.808Z" transform="translate(269.267 195)" fill="#878787"/>
+        <g transform="translate(307.306 189.5)">
+          <path d="M.375,6h-.75V0h.75Z" transform="translate(0.375 0)" fill="#878787"/>
+          <path d="M.375,6h-.75V0h.75Z" transform="translate(5.375 0)" fill="#e0131c"/>
+        </g>
+      </g>
+      <rect width="74" height="54%" transform="translate(8 87)" fill="#ff4d4f"/>
+      <rect width="75" height="35%" transform="translate(8 88)" fill="#36cfc9"/>
+      <text>
+        <tspan x="31" y="68">
+       </tspan>
+        <tspan x="10" y="108">
+        </tspan>
+        <tspan x="10" y="128">
+        </tspan>
+        <tspan x="30" y="150">
+        </tspan>
+        <tspan x="30" y="170">
+        </tspan>
+        <tspan x="30" y="190">
+        </tspan>
+        <tspan x="30" y="210">
+        </tspan>
+      </text>
+    </svg>

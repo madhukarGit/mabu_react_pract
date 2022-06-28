@@ -1,0 +1,30 @@
+.edit__selection__bin_drawer {
+  width: 40rem;
+  padding: 0 0.2rem;
+  margin-top: 5rem;
+}
+
+.form-label__entry {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  text-transform: capitalize;
+}
+.form-labels-align__entry {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin-bottom: 0.5rem;
+}
+.form-labels-align__entry input {
+  outline: none;
+  border: none;
+  background-color: #f2f2f2;
+  height: 2.8rem;
+  border-bottom: 1px solid #d1d7e0;
+}
+
+.form-labels-align__entry input:active,
+.form-labels-align__entry input:focus {
+  border-bottom: 2px solid #cc0000;
+}
