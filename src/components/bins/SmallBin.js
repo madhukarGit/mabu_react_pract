@@ -1,4 +1,4 @@
-const SmallBin = ({ height, width, code, percentage }) => {
+const SmallBin = ({ height, width, code, percentage, protien, tw }) => {
   let free_of_available = (percentage * 69) / 100;
 
   return (
@@ -44,7 +44,7 @@ const SmallBin = ({ height, width, code, percentage }) => {
         <tspan x="31" y="68" style={{ fontSize: "9px", fontWeight: 700 }}>
           {code}
         </tspan>
-        <tspan x="20" y="108" style={{ fontSize: "11px", fontWeight: 700 }}>
+        <tspan x="15" y="108" style={{ fontSize: "11px", fontWeight: 700 }}>
           Free {percentage}%
         </tspan>
         <tspan x="15" y="128" style={{ fontSize: "10px", fontWeight: 700 }}>
@@ -54,13 +54,13 @@ const SmallBin = ({ height, width, code, percentage }) => {
           na
         </tspan>
         <tspan x="30" y="170" style={{ fontSize: "11px", fontWeight: 700 }}>
-          11
+          {protien}
         </tspan>
         <tspan x="30" y="190" style={{ fontSize: "11px", fontWeight: 700 }}>
           na
         </tspan>
         <tspan x="30" y="210" style={{ fontSize: "11px", fontWeight: 700 }}>
-          61.12
+          {tw}
         </tspan>
       </text>
     </svg>

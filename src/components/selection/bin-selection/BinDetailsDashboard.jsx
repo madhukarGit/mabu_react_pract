@@ -1,12 +1,11 @@
 import React from "react";
 import "./BinDetailsDashboard.css";
 import { useSelector } from "react-redux";
+import DashboardCard from "../../selection-dashboard/DashboardCard";
 
 const BinDetailsDashboard = () => {
   const data = useSelector((state) => state.auth.data);
   const isAuth = useSelector((state) => state.auth.isAuth);
-  console.log("data is ", data);
-  console.log("isAuth is ", isAuth);
   const binCapacityDetails = (isAuth && data.site_location_details[0]) || {};
 
   return (
@@ -39,6 +38,7 @@ const BinDetailsDashboard = () => {
           />
         </div>
       </section>
+      <DashboardCard />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 const BinsHighlighted = ({ width, height, code, percentage, protien, tw }) => {
-  console.log(`code ${code} percentage ${percentage}`);
   let free_of_available = (percentage * 71) / 100;
   return (
     <svg

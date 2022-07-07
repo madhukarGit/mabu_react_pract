@@ -13,23 +13,78 @@ const BinSelection = () => {
   const width = "10%";
   const sheight = "7.5%";
   const swidth = "7.5%";
-  const data = useSelector((state) => state.auth.data);
-  const isAuth = useSelector((state) => state.auth.isAuth);
-  const userToken = useSelector((state) => state.auth.token);
+
+  const { isAuth, token } = useSelector((state) => state.auth);
+  const userToken = token;
+
+  //fetching selection API bin data
   const selection_api_data = useSelector(
     (state) => state.selection.selectionData
   );
-  useEffect(() => {
-    dispatch(binSelection(userToken));
-  }, []);
 
-  const binSelectionDetails =
-    isAuth && data.site_location_details[0].site_location_bin_details;
+  const saveSuggestedBinData = useSelector(
+    (state) => state.editGrain.saveSuggestionData
+  );
+
+  console.log(
+    "save suggested bin data to reload on update of bain",
+    saveSuggestedBinData
+  );
+
+  console.log("token is ", userToken);
+  useEffect(() => {
+    console.log("selection_api_data  ", selection_api_data);
+    dispatch(binSelection(userToken));
+  }, [userToken]);
+
+  useEffect(() => {
+    if (saveSuggestedBinData && Object.keys(saveSuggestedBinData).length > 0) {
+      dispatch(binSelection(userToken));
+    }
+  }, [saveSuggestedBinData]);
 
   const bin_details_interface = selection_api_data.data;
 
-  console.log("bin details interface ", bin_details_interface);
-  console.log("token is ", userToken);
+  let bin01 = [];
+  let bin02 = [];
+  let bin03 = [];
+  let bin04 = [];
+  let bin05 = [];
+  let bin06 = [];
+  let bin07 = [];
+  let bin08 = [];
+  let bin09 = [];
+
+  if (bin_details_interface) {
+    bin01 = bin_details_interface.filter((d) => {
+      return d.bin_id === 1;
+    });
+    bin02 = bin_details_interface.filter((d) => {
+      return d.bin_id === 2;
+    });
+    bin03 = bin_details_interface.filter((d) => {
+      return d.bin_id === 3;
+    });
+    bin04 = bin_details_interface.filter((d) => {
+      return d.bin_id === 4;
+    });
+    bin05 = bin_details_interface.filter((d) => {
+      return d.bin_id === 5;
+    });
+    bin06 = bin_details_interface.filter((d) => {
+      return d.bin_id === 6;
+    });
+    bin07 = bin_details_interface.filter((d) => {
+      return d.bin_id === 7;
+    });
+    bin08 = bin_details_interface.filter((d) => {
+      return d.bin_id === 8;
+    });
+    bin09 = bin_details_interface.filter((d) => {
+      return d.bin_id === 9;
+    });
+  }
+
   return (
     <React.Fragment>
       <BinDetails />
@@ -40,19 +95,19 @@ const BinSelection = () => {
               <>
                 <div className="bin__names__align">
                   <div className="bin__names__1">
-                    <span>{binSelectionDetails[0].bin_capacity}</span>
-                    <span>{binSelectionDetails[1].bin_capacity}</span>
-                    <span>{binSelectionDetails[2].bin_capacity}</span>
+                    <span>160,041</span>
+                    <span>160,041</span>
+                    <span>160,041</span>
                   </div>
                   <div className="bin__names__2">
-                    <span>{binSelectionDetails[3].bin_capacity}</span>
-                    <span>{binSelectionDetails[4].bin_capacity}</span>
-                    <span>{binSelectionDetails[5].bin_capacity}</span>
+                    <span>8000</span>
+                    <span>8000</span>
+                    <span>Blending/Loading</span>
                   </div>
                   <div className="bin__names__3">
-                    <span>{binSelectionDetails[6].bin_capacity}</span>
-                    <span>{binSelectionDetails[7].bin_capacity}</span>
-                    <span>{binSelectionDetails[8].bin_capacity}</span>
+                    <span>160,041</span>
+                    <span>160,041</span>
+                    <span>160,041</span>
                   </div>
                 </div>
                 <div className="bins__selection">
@@ -70,162 +125,126 @@ const BinSelection = () => {
                     <BinsLarge
                       height={height}
                       width={width}
-                      code={bin_details_interface[0].commodity_type_code}
-                      percentage={
-                        bin_details_interface[0].bin_available_capacity_percent
-                      }
+                      code={bin06[0].commodity_type_code}
+                      percentage={bin06[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[0]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin06[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[0]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin06[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <BinsLarge
                       height={height}
                       width={width}
-                      code={bin_details_interface[1].commodity_type_code}
-                      percentage={
-                        bin_details_interface[1].bin_available_capacity_percent
-                      }
+                      code={bin05[0].commodity_type_code}
+                      percentage={bin05[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[1]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin05[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[1]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin05[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <BinsLarge
                       height={height}
                       width={width}
-                      code={bin_details_interface[2].commodity_type_code}
-                      percentage={
-                        bin_details_interface[2].bin_available_capacity_percent
-                      }
+                      code={bin04[0].commodity_type_code}
+                      percentage={bin04[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[2]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin04[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[2]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin04[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <SmallBin
                       height={sheight}
                       width={swidth}
-                      code={bin_details_interface[3].commodity_type_code}
-                      percentage={
-                        bin_details_interface[3].bin_available_capacity_percent
-                      }
+                      code={bin02[0].commodity_type_code}
+                      percentage={bin02[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[3]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin02[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[3]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin02[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <SmallBin
                       height={sheight}
                       width={swidth}
-                      code={bin_details_interface[4].commodity_type_code}
-                      percentage={
-                        bin_details_interface[4].bin_available_capacity_percent
-                      }
+                      code={bin03[0].commodity_type_code}
+                      percentage={bin03[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[4]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin03[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[4]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin03[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <SmallBin
                       height={sheight}
                       width={swidth}
-                      code={bin_details_interface[5].commodity_type_code}
-                      percentage={
-                        bin_details_interface[5].bin_available_capacity_percent
-                      }
+                      code={bin01[0].commodity_type_code}
+                      percentage={bin01[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[5]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin01[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[5]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin01[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <BinsLarge
                       height={height}
                       width={width}
-                      code={bin_details_interface[6].commodity_type_code}
-                      percentage={
-                        bin_details_interface[6].bin_available_capacity_percent
-                      }
+                      code={bin07[0].commodity_type_code}
+                      percentage={bin07[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[6]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin07[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[6]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin07[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <BinsLarge
                       height={height}
                       width={width}
-                      code={bin_details_interface[7].commodity_type_code}
-                      percentage={
-                        bin_details_interface[7].bin_available_capacity_percent
-                      }
+                      code={bin08[0].commodity_type_code}
+                      percentage={bin08[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[7]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin08[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[7]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin08[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
                     <BinsLarge
                       height={height}
                       width={width}
-                      code={bin_details_interface[8].commodity_type_code}
-                      percentage={
-                        bin_details_interface[8].bin_available_capacity_percent
-                      }
+                      code={bin09[0].commodity_type_code}
+                      percentage={bin09[0].bin_available_capacity_percent}
                       protien={
-                        bin_details_interface[8]
-                          .bin_allocate_criteria_type_percent_details[0]
+                        bin09[0].bin_allocate_criteria_type_percent_details[0]
                           .bin_current_capacity_criteria_type_value
                       }
                       tw={
-                        bin_details_interface[8]
-                          .bin_allocate_criteria_type_percent_details[1]
+                        bin09[0].bin_allocate_criteria_type_percent_details[1]
                           .bin_current_capacity_criteria_type_value
                       }
                     />
@@ -233,19 +252,19 @@ const BinSelection = () => {
                 </div>
                 <div className="bin__names__align__names">
                   <div className="bin__names__1__label">
-                    <span>{binSelectionDetails[0].bin_label}</span>
-                    <span>{binSelectionDetails[1].bin_label}</span>
-                    <span>{binSelectionDetails[2].bin_label}</span>
+                    <span>BIN 06</span>
+                    <span>BIN 05</span>
+                    <span>BIN 04</span>
                   </div>
                   <div className="bin__names__2__label">
-                    <span>{binSelectionDetails[3].bin_label}</span>
-                    <span>{binSelectionDetails[4].bin_label}</span>
-                    <span>{binSelectionDetails[5].bin_label}</span>
+                    <span>BIN 02</span>
+                    <span>BIN 03</span>
+                    <span>BIN 01</span>
                   </div>
                   <div className="bin__names__3__label">
-                    <span>{binSelectionDetails[6].bin_label}</span>
-                    <span>{binSelectionDetails[7].bin_label}</span>
-                    <span>{binSelectionDetails[8].bin_label}</span>
+                    <span>BIN 07</span>
+                    <span>BIN 08</span>
+                    <span>BIN 09</span>
                   </div>
                 </div>
               </>

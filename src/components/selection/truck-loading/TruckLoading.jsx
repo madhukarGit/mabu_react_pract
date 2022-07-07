@@ -1,21 +1,32 @@
-import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import { IconButton, SwipeableDrawer } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./TruckLoading";
 import TruckLogo from "../../../assets/truck_logo.svg";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
-import IncomingTruck from "../bin-selection/IncomingTruck";
 import SelectionEditBin from "../bin-selection/SelectionEditBin";
+import { useSelector, useDispatch } from "react-redux";
+import { binGrainActions } from "../../../editBinActions/editBinSlice";
 
 const TruckLoading = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  console.log(openDrawer);
+  const closeDrawer = useSelector((state) => state.editGrain.closeDrawer);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (closeDrawer) {
+      setOpenDrawer(false);
+    }
+  }, [closeDrawer]);
+
+  const closeDrawerHandler = () => {
+    dispatch(binGrainActions.binSuggestionRequest([]));
+    setOpenDrawer(false);
+  };
   const drawer = (
     <React.Fragment>
       <SwipeableDrawer
         open={openDrawer}
-        onClose={() => setOpenDrawer(false)}
+        onClose={closeDrawerHandler}
         onOpen={() => setOpenDrawer(true)}
         anchor={"right"}
       >
@@ -39,10 +50,10 @@ const TruckLoading = () => {
           sx={{
             height: 40,
             width: 40,
-            fill: "#379683",
+            fill: "#577f7d",
             cursor: "pointer",
             transition: "all 0.8s",
-            "&:hover": { fill: "#FF652F" },
+            "&:hover": { fill: "#7eb690" },
           }}
           onClick={() => setOpenDrawer(!openDrawer)}
         />

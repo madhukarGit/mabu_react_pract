@@ -6,6 +6,7 @@ import {
   TableHead,
   TableRow,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,9 +14,12 @@ import { useDispatch, useSelector } from "react-redux";
 import "./BinSelectionLevelTable.css";
 
 const Span = styled("span")(({ theme }) => ({
-  fontSize: "1.4rem",
+  fontSize: "1.2rem",
   fontWeight: 700,
   padding: "0 1rem",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "0.7rem",
+  },
 }));
 
 const TypoSpan = styled(Typography)(({ theme }) => ({
@@ -40,6 +44,8 @@ const BinSelectionLevelTable = () => {
   const selection_api_data = useSelector(
     (state) => state.selection.selectionData
   );
+
+  const matches = useMediaQuery("(max-width:1300px)");
 
   const bin_details_interface = selection_api_data.data;
 

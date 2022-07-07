@@ -1,11 +1,8 @@
 import { authActions } from "./loginSlice";
 import axios from "axios";
-import { toast } from "react-toastify";
 
 export const loginUser = (userData) => {
   return async (dispatch) => {
-    console.log("user data is ", userData);
-
     const sendLoginRequest = async () => {
       const response = await axios.post(
         "http://localhost:8080/api/auth/signin",

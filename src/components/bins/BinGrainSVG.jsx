@@ -1,4 +1,4 @@
-const BinGrainSVG = () => {
+const BinGrainSVG = ({ color, suggestion, binNo }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ const BinGrainSVG = () => {
           id="Selection"
           transform="translate(1132 546)"
           fill="#f6f9fd"
-          stroke="#d49836"
+          stroke={color}
         >
           <rect width="60" height="60" stroke="none" />
           <rect x="-0.5" y="-0.5" width="61" height="61" fill="none" />
@@ -84,22 +84,54 @@ const BinGrainSVG = () => {
           letterSpacing="-0.017em"
         >
           <tspan x="0" y="0">
-            Bin 04
+            Bin {binNo}
           </tspan>
         </text>
-        <text
-          id="Suggested_"
-          data-name="Suggested ! "
-          transform="translate(1192 557)"
-          fill="#d49836"
-          fontSize="8"
-          fontFamily="OpenSans, Open Sans"
-          letterSpacing="-0.017em"
-        >
-          <tspan x="-54" y="0">
-            Suggested !{" "}
-          </tspan>
-        </text>
+        {suggestion === "suggested" && (
+          <text
+            id="Suggested_"
+            data-name="Suggested ! "
+            transform="translate(1192 557)"
+            fill="#d49836"
+            fontSize="8"
+            fontFamily="OpenSans, Open Sans"
+            letterSpacing="-0.017em"
+          >
+            <tspan x="-54" y="0">
+              Suggested !{" "}
+            </tspan>
+          </text>
+        )}
+        {suggestion === "NA Full" && (
+          <text
+            id="NA_Full_"
+            data-name="NA Full!"
+            transform="translate(1190 556)"
+            fill="#ff4d4f"
+            fontSize="10"
+            fontFamily="OpenSans, Open Sans"
+            letterSpacing="-0.017em"
+          >
+            <tspan x="-34" y="0">
+              NA Full!
+            </tspan>
+          </text>
+        )}
+        {suggestion === "available" && (
+          <text
+            id="Available_"
+            data-name="Available! "
+            transform="translate(1192 557)"
+            fill="#36cfc9"
+            fontSize="10"
+            fontFamily="OpenSans, Open Sans"
+            letterSpacing="-0.017em"
+          >
+            <tspan x="-45" y="0">
+              Available!{" "}
+            </tspan>
+          </text>
+        )}
       </g>
     </svg>
   );

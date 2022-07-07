@@ -7,15 +7,19 @@ import store from "./store/store";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "@mui/material";
+import Theme from "./theme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <ThemeProvider theme={Theme}>
+          <App />
+        </ThemeProvider>
       </BrowserRouter>
     </Provider>
     <ToastContainer className="toast-position" position="top-center" />
-  </React.StrictMode>
+  </>
 );

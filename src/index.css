@@ -38,3 +38,62 @@
 .toast-position {
   margin-top: 4rem;
 }
+
+@media screen and (max-width: 1300px) {
+  :root {
+    font-size: 55.5%;
+  }
+  .card__bin__details {
+    padding: 0.8rem 2rem;
+  }
+  .card__bin__details__chart {
+    padding: 0.8rem 2rem;
+  }
+  .card__bin__details__table {
+    padding: 0.8rem 2rem;
+  }
+  .bin__names__align {
+    display: flex;
+  }
+
+  .bin__names__1 {
+    display: flex;
+    margin-left: 13rem;
+    align-items: center;
+    gap: 10rem;
+  }
+  .bin__names__2 {
+    display: flex;
+    margin-left: 9rem;
+    align-items: center;
+    gap: 8rem;
+  }
+  .bin__names__3 {
+    display: flex;
+    margin-left: 4rem;
+    align-items: center;
+    gap: 9rem;
+  }
+
+  .bins__selection__fileds > * {
+    padding: 0.8rem;
+  }
+  .bin__names__1__label {
+    display: flex;
+    margin-left: 13rem;
+    align-items: center;
+    gap: 10rem;
+  }
+  .bin__names__2__label {
+    display: flex;
+    margin-left: 9rem;
+    align-items: center;
+    gap: 8rem;
+  }
+  .bin__names__3__label {
+    display: flex;
+    margin-left: 9rem;
+    align-items: center;
+    gap: 10rem;
+  }
+}

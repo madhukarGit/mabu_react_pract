@@ -22,7 +22,6 @@ const loginSlice = createSlice({
       state.token = "";
     },
     userData: (state, action) => {
-      console.log("data payload", action.payload.accessToken);
       state.data = action.payload;
       state.token = action.payload.accessToken;
     },

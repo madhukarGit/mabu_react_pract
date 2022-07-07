@@ -10,13 +10,14 @@ import { toast } from "react-toastify";
 import Dashboard from "./components/selection-dashboard/Dashboard";
 
 const App = () => {
-  const { isAuth, error, data } = useSelector((state) => state.auth);
+  const { isAuth, error, data, token } = useSelector((state) => state.auth);
   const naviagte = useNavigate();
-  console.log("isAuth ", isAuth);
 
   useEffect(() => {
     if (isAuth) {
+      console.log("isAuth app [App.js] ", isAuth);
       toast.success("login is successful");
+
       naviagte("/selection");
     } else {
       naviagte("/");

@@ -1,0 +1,43 @@
+.columns {
+  display: flex;
+  height: 22vh;
+  border: 1px solid #ccc;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 40px;
+}
+.column-container:first-child {
+  margin-left: 10px;
+}
+.column-bar {
+  border-right: 1px solid white;
+}
+
+.series-a {
+  background: #ffab5c;
+}
+.series-b {
+  background: #9672c1;
+}
+.chart__bin__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 2px;
+}
+.bin__property_name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 1px;
+}
+.bin__property_value {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 8px;
+}

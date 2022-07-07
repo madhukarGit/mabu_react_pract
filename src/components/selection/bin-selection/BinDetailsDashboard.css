@@ -115,3 +115,9 @@
   border: none;
   outline: none;
 }
+
+.truck_assignment_loading {
+  padding: 0.1rem 1rem;
+  display: flex;
+  margin-top: 3rem;
+}

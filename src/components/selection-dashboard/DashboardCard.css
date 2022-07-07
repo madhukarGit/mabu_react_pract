@@ -1,0 +1,83 @@
+.card__bin__details {
+  padding: 1rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__bin__details__chart {
+  padding: 0.8rem 8rem;
+}
+.card__bin__details__table {
+  padding: 0.6rem 8rem;
+}
+.chart__nav__h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__d__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.card__d__details > :nth-child(2) {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  align-self: center;
+  letter-spacing: 2px;
+}
+
+.card__d__details > :nth-child(2) {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.card__dot__details {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 1rem;
+  background-color: #5d5c61;
+}
+.section__border__bushels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__d__details__trucl_bags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.card__d__details__trucl_bags > :nth-child(2) {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  align-self: center;
+  letter-spacing: 2px;
+}
+.card__d__details__trucl_bags > :nth-child(3) {
+  align-self: center;
+  font-weight: 500;
+}
+.card__load__spinner {
+  display: flex;
+  width: 100%;
+}
+
+.card__load__spinner {
+  display: flex;
+
+  align-items: center;
+}
+.card__load__spinner > :last-child {
+  margin-left: auto;
+  margin-right: 1rem;
+}
